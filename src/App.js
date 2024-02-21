@@ -40,21 +40,27 @@ export class App extends React.Component {
           <Nav />  
           <Switch>
             <Route
-              path="/ "
+              path="/home"
               render={(props) => (
                 <TargetList {...props} />
               )}
             />
             <Route
-              path="/list"
+              path="/list" exact
               render={(props) => (
                 <TripList {...props} trips={this.state.allTrips} />
               )}
             />
             <Route
-              path="/add"
+              path="/add" exact
               render={(props) => (
                 <AddTrip {...props} AddNewTrip={this.addTrip} />
+              )}
+            />
+            <Route
+              path="/"
+              render={(props) => (
+                <TargetList {...props} />
               )}
             />
           </Switch>
