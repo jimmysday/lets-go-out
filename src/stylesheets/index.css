@@ -15,6 +15,7 @@ body {
   background-size: cover;
   margin: 0 auto;
   padding: 0;
+  height:700;
 }
 
 h1,
@@ -33,17 +34,22 @@ h3 {
 }
 
 .route-container {
-  display: flex;
-}
-.route-container .nav {
-  height: 100vh;
-  width: 64px;
-  display: flex;
+  display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.route-container .nav {
+  position:fixed;
+  top: 650px;
+  height: 100vh;
+  width: 164px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .route-container .nav a {
+  padding: 28px;
   font-size: 28px;
   padding-bottom: 1em;
 }
@@ -94,6 +100,8 @@ h3 {
   display: inline-block;
 }
 .route-container .form-container {
+  height:100;
+  bottom:100;
   flex: auto;
   display: flex;
   flex-direction: row;

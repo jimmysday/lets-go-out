@@ -3,6 +3,7 @@ import { Nav } from "./components/Nav";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AddTrip } from "./components/trip/AddTrip";
 import { TripList } from "./components/trip/TripList";
+import { TargetList } from "./components/trip/TargetList";
 
 export class App extends React.Component {
   constructor(props) {
@@ -36,8 +37,14 @@ export class App extends React.Component {
     return (
       <Router>
         <div className="route-container">
-          <Nav />
+          <Nav />  
           <Switch>
+            <Route
+              path="/ "
+              render={(props) => (
+                <TargetList {...props} />
+              )}
+            />
             <Route
               path="/list"
               render={(props) => (

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export const Nav = () => {
   return (
     <nav className="nav">
-      <Link to="/">
+      <Link to="/ ">
         <FaHome />
       </Link>
       <Link to="/add">
